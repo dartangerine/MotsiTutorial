@@ -11,11 +11,11 @@ Welcome to Motsi's documentation!
    :caption: Contents:
 
 
-   Make .mti File <1.make_mti_file>
-   Differential Analysis <2.differential_analysis>
-   Saturation Analysis <3.saturation_analysis>
-   Lag Correlation <4.lag_correlation>
-   Multi Clustering <5.multi_clustering>
+   'Make .mti File' <1.make_mti_file>
+   'Differential Analysis' <2.differential_analysis>
+   'Saturation Analysis' <3.saturation_analysis>
+   'Lag Correlation' <4.lag_correlation>
+   'Multi Clustering' <5.multi_clustering>
 
 Indices and tables
 ==================
