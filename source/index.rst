@@ -5,8 +5,8 @@ Welcome to Motsi documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   1.make_mti_file <Make .mti File>
-   2.differential_analysis <Differential Analysis>
+   Make .mti File <1.make_mti_file>
+   Differential Analysis <2.differential_analysis>
 
 
 Indices and tables
