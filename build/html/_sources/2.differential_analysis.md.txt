@@ -18,14 +18,16 @@ motsi.py Diff [-h] -m MTI [MTI ...] [-t THRESHOLD] [-o OUTPUT] [--fillna FILL_NA
 ```
 
 required arguments:
-  `-m` : List of input .mti files. Multiple files represent multiple replications.
+
+-   `-m` : List of input .mti files. Multiple files represent multiple replications.
 
 options:
-  `-t`. Stable Differential Gene STFC thresholds (Default: 0.5)
-  `-o`: Output dir. (Default: DifferentialResult)
-  `--fillna` : Fill NA value with 0. (Default: True)
-  `--rep_weight`: The weight for replications when calculating STD (Default: 0.5)
-  `--input_value`: You can choose between inputting RawValues and Log2FoldChange. {raw,LFC}  (Default: raw)
+
+-   `-t`. Stable Differential Gene STFC thresholds (Default: 0.5)
+-   `-o`: Output dir. (Default: DifferentialResult)
+-   `--fillna` : Fill NA value with 0. (Default: True)
+-   `--rep_weight`: The weight for replications when calculating STD (Default: 0.5)
+-   `--input_value`: You can choose between inputting RawValues and Log2FoldChange. {raw,LFC}  (Default: raw)
 
 ## Output
 
@@ -49,3 +51,4 @@ The columns are identical to those in `all_{target}.tsv`. They respectively cont
 #### All/Up/Down{target}_Heatmap.pdf 
 
 Heatmaps used to visualize the three aforementioned data tables. The values displayed represent the average of all replicate input values. These averages are transformed by calculating `Log10(value + 1)`, followed by Z-score normalization for each target (i.e., each row).
+

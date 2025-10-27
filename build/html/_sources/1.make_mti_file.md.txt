@@ -30,23 +30,26 @@ Then you can use `mtiRNA` through：
 ```
 
 required arguments:
-  `-f`: List of input .fastq files. For paired-end data, provide _1 file here
-  `-g`: Gene bed6 file.
-  `-i`: Kallisto index file. 
 
-​	-- You can make it by `$ kallisto index`.
-  `-gtf` : `.gtf` file. Here is some example to show you how to download it:
+-   `-f`: List of input .fastq files. For paired-end data, provide _1 file here
+-   `-g`: Gene bed6 file.
+-   `-i`: Kallisto index file. 
+
+​		-- You can make it by `$ kallisto index`.
+
+-   `-gtf` : `.gtf` file. Here is some example to show you how to download it:
 
 ​	-- hg38: `wget -c https://ftp.ensembl.org/pub/release-109/gtf/homo_sapiens/Homo_sapiens.GRCh38.109.gtf.gz`
 
 ​	-- hg19: `wget -c ftp://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.75.gtf.gz`
 
 options:
-  `-f2`:  List of input _2 .fastq files. Only usable for pair-end sequencing data. (Default: None)
-  `-s`: List of sample names. (Default: T1,T2,...)
-  `-t` : Number of threads. (Default: 1)
-  `--norm_type` : Normalization type.  (Default: tpm).  `agmn` for all gene median normalization
-  `-p`: Prefix for output file. (Default: MotsiRNAResults)
+
+-   `-f2`:  List of input _2 .fastq files. Only usable for pair-end sequencing data. (Default: None)
+-   `-s`: List of sample names. (Default: T1,T2,...)
+-   `-t` : Number of threads. (Default: 1)
+-   `--norm_type` : Normalization type.  (Default: tpm).  `agmn` for all gene median normalization
+-   `-p`: Prefix for output file. (Default: MotsiRNAResults)
 
 
 
@@ -68,16 +71,18 @@ motsi.py mtiEpi [-h] -f FILE [FILE ...] -gt GENOME_TABLE -g GENE [-s SAMPLE [SAM
 ```
 
 required arguments:
-  `-f` : List of input files.
-  `-gt` : Genome table file. Records chromosome length.
-  `-g`: Gene bed6 file.
+
+-   `-f` : List of input files.
+-   `-gt` : Genome table file. Records chromosome length.
+-   `-g`: Gene bed6 file.
 
 options:
-  `-s`: List of sample names. (Default: T1,T2,...)
-  `-p`: Prefix for output file. (Default: MotsiEpiResults)
-  `--norm_type`:  Normalization type. {no_norm,agmn,spmr} (Default: agmn)
-  `--file_type`: File type for input files. {bw,bedg,bam}  (Default: bw)
-  `-max_distance`: Max distance from site to gene TSS. For a given gene, epigenetic signals beyond this distance will not be considered.(Default: 10000)
+
+-   `-s`: List of sample names. (Default: T1,T2,...)
+-   `-p`: Prefix for output file. (Default: MotsiEpiResults)
+-   `--norm_type`:  Normalization type. {no_norm,agmn,spmr} (Default: agmn)
+-   `--file_type`: File type for input files. {bw,bedg,bam}  (Default: bw)
+-   `-max_distance`: Max distance from site to gene TSS. For a given gene, epigenetic signals beyond this distance will not be considered.(Default: 10000)
 
 
 
@@ -93,16 +98,18 @@ The usage of mtiTf is as follows:
 ```
 
 required arguments:
-  `-f` : List of input files.
-  `-gt` : Genome table file. Records chromosome length.
-  `-g`: Gene bed6 file.
-  `-c`： Candidate site file -- a file in BED3 format that records potential transcription factor binding sites.
+
+-   `-f` : List of input files.
+-   `-gt` : Genome table file. Records chromosome length.
+-   `-g`: Gene bed6 file.
+-   `-c`： Candidate site file -- a file in BED3 format that records potential transcription factor binding sites.
 
 options:
-  `-s`: List of sample names. (Default: T1,T2,...)
-  `-p`: Prefix for output file. (Default: MotsiEpiResults)
-  `--norm_type`:  Normalization type. {no_norm,agmn,spmr} (Default: agmn)
-  `--file_type`: File type for input files. {bw,bedg,bam}  (Default: bw)
+
+-   `-s`: List of sample names. (Default: T1,T2,...)
+-   `-p`: Prefix for output file. (Default: MotsiEpiResults)
+-   `--norm_type`:  Normalization type. {no_norm,agmn,spmr} (Default: agmn)
+-   `--file_type`: File type for input files. {bw,bedg,bam}  (Default: bw)
 
 
 

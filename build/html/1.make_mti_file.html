@@ -18,7 +18,9 @@
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Differential Analysis" href="2.differential_analysis.html" />
+    <link rel="prev" title="Welcome to Motsi’s documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,17 +42,18 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Make <code class="docutils literal notranslate"><span class="pre">.mti</span></code> File</a><ul>
-<li><a class="reference internal" href="#mtirna">mtiRNA</a></li>
-<li><a class="reference internal" href="#mtiepi">mtiEpi</a></li>
-<li><a class="reference internal" href="#mtitf">mtiTf</a></li>
-<li><a class="reference internal" href="#mtiepihic">mtiEpiHiC</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Make .mti File</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mtirna">mtiRNA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mtiepi">mtiEpi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mtitf">mtiTf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mtiepihic">mtiEpiHiC</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="2.differential_analysis.html">Differential Analysis</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -94,20 +97,26 @@
 <span class="w">                       </span><span class="o">[</span>-s<span class="w"> </span>SAMPLE<span class="w"> </span><span class="o">[</span>SAMPLE<span class="w"> </span>...<span class="o">]]</span><span class="w"> </span><span class="o">[</span>-t<span class="w"> </span>THREAD<span class="o">]</span><span class="w"> </span><span class="o">[</span>--norm_type<span class="w"> </span><span class="o">{</span>agmn,tpm<span class="o">}]</span><span class="w"> </span><span class="o">[</span>-p<span class="w"> </span>PREFIX<span class="o">]</span>
 </pre></div>
 </div>
-<p>required arguments:
-<code class="docutils literal notranslate"><span class="pre">-f</span></code>: List of input .fastq files. For paired-end data, provide _1 file here
-<code class="docutils literal notranslate"><span class="pre">-g</span></code>: Gene bed6 file.
-<code class="docutils literal notranslate"><span class="pre">-i</span></code>: Kallisto index file.</p>
-<p>​	– You can make it by <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">kallisto</span> <span class="pre">index</span></code>.
-<code class="docutils literal notranslate"><span class="pre">-gtf</span></code> : <code class="docutils literal notranslate"><span class="pre">.gtf</span></code> file. Here is some example to show you how to download it:</p>
+<p>required arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-f</span></code>: List of input .fastq files. For paired-end data, provide _1 file here</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-g</span></code>: Gene bed6 file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-i</span></code>: Kallisto index file.</p></li>
+</ul>
+<p>​		– You can make it by <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">kallisto</span> <span class="pre">index</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-gtf</span></code> : <code class="docutils literal notranslate"><span class="pre">.gtf</span></code> file. Here is some example to show you how to download it:</p></li>
+</ul>
 <p>​	– hg38: <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">-c</span> <span class="pre">https://ftp.ensembl.org/pub/release-109/gtf/homo_sapiens/Homo_sapiens.GRCh38.109.gtf.gz</span></code></p>
 <p>​	– hg19: <code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">-c</span> <span class="pre">ftp://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.75.gtf.gz</span></code></p>
-<p>options:
-<code class="docutils literal notranslate"><span class="pre">-f2</span></code>:  List of input _2 .fastq files. Only usable for pair-end sequencing data. (Default: None)
-<code class="docutils literal notranslate"><span class="pre">-s</span></code>: List of sample names. (Default: T1,T2,…)
-<code class="docutils literal notranslate"><span class="pre">-t</span></code> : Number of threads. (Default: 1)
-<code class="docutils literal notranslate"><span class="pre">--norm_type</span></code> : Normalization type.  (Default: tpm).  <code class="docutils literal notranslate"><span class="pre">agmn</span></code> for all gene median normalization
-<code class="docutils literal notranslate"><span class="pre">-p</span></code>: Prefix for output file. (Default: MotsiRNAResults)</p>
+<p>options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-f2</span></code>:  List of input _2 .fastq files. Only usable for pair-end sequencing data. (Default: None)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-s</span></code>: List of sample names. (Default: T1,T2,…)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-t</span></code> : Number of threads. (Default: 1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--norm_type</span></code> : Normalization type.  (Default: tpm).  <code class="docutils literal notranslate"><span class="pre">agmn</span></code> for all gene median normalization</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>: Prefix for output file. (Default: MotsiRNAResults)</p></li>
+</ul>
 </section>
 <section id="mtiepi">
 <h2>mtiEpi<a class="headerlink" href="#mtiepi" title="Link to this heading"></a></h2>
@@ -121,16 +130,20 @@
 <span class="w">                       </span><span class="o">[</span>--norm_type<span class="w"> </span><span class="o">{</span>no_norm,agmn,spmr<span class="o">}]</span><span class="w"> </span><span class="o">[</span>--file_type<span class="w"> </span><span class="o">{</span>bw,bedg,bam<span class="o">}]</span><span class="w"> </span><span class="o">[</span>-max_distance<span class="w"> </span>MAXDISTANCE<span class="o">]</span>
 </pre></div>
 </div>
-<p>required arguments:
-<code class="docutils literal notranslate"><span class="pre">-f</span></code> : List of input files.
-<code class="docutils literal notranslate"><span class="pre">-gt</span></code> : Genome table file. Records chromosome length.
-<code class="docutils literal notranslate"><span class="pre">-g</span></code>: Gene bed6 file.</p>
-<p>options:
-<code class="docutils literal notranslate"><span class="pre">-s</span></code>: List of sample names. (Default: T1,T2,…)
-<code class="docutils literal notranslate"><span class="pre">-p</span></code>: Prefix for output file. (Default: MotsiEpiResults)
-<code class="docutils literal notranslate"><span class="pre">--norm_type</span></code>:  Normalization type. {no_norm,agmn,spmr} (Default: agmn)
-<code class="docutils literal notranslate"><span class="pre">--file_type</span></code>: File type for input files. {bw,bedg,bam}  (Default: bw)
-<code class="docutils literal notranslate"><span class="pre">-max_distance</span></code>: Max distance from site to gene TSS. For a given gene, epigenetic signals beyond this distance will not be considered.(Default: 10000)</p>
+<p>required arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-f</span></code> : List of input files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-gt</span></code> : Genome table file. Records chromosome length.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-g</span></code>: Gene bed6 file.</p></li>
+</ul>
+<p>options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-s</span></code>: List of sample names. (Default: T1,T2,…)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>: Prefix for output file. (Default: MotsiEpiResults)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--norm_type</span></code>:  Normalization type. {no_norm,agmn,spmr} (Default: agmn)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--file_type</span></code>: File type for input files. {bw,bedg,bam}  (Default: bw)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-max_distance</span></code>: Max distance from site to gene TSS. For a given gene, epigenetic signals beyond this distance will not be considered.(Default: 10000)</p></li>
+</ul>
 </section>
 <section id="mtitf">
 <h2>mtiTf<a class="headerlink" href="#mtitf" title="Link to this heading"></a></h2>
@@ -140,16 +153,20 @@
 <span class="w">                      </span><span class="o">[</span>-p<span class="w"> </span>PREFIX<span class="o">]</span><span class="w"> </span><span class="o">[</span>--norm_type<span class="w"> </span><span class="o">{</span>no_norm,agmn,spmr<span class="o">}]</span><span class="w"> </span><span class="o">[</span>--file_type<span class="w"> </span><span class="o">{</span>bw,bedg,bam<span class="o">}]</span>
 </pre></div>
 </div>
-<p>required arguments:
-<code class="docutils literal notranslate"><span class="pre">-f</span></code> : List of input files.
-<code class="docutils literal notranslate"><span class="pre">-gt</span></code> : Genome table file. Records chromosome length.
-<code class="docutils literal notranslate"><span class="pre">-g</span></code>: Gene bed6 file.
-<code class="docutils literal notranslate"><span class="pre">-c</span></code>： Candidate site file – a file in BED3 format that records potential transcription factor binding sites.</p>
-<p>options:
-<code class="docutils literal notranslate"><span class="pre">-s</span></code>: List of sample names. (Default: T1,T2,…)
-<code class="docutils literal notranslate"><span class="pre">-p</span></code>: Prefix for output file. (Default: MotsiEpiResults)
-<code class="docutils literal notranslate"><span class="pre">--norm_type</span></code>:  Normalization type. {no_norm,agmn,spmr} (Default: agmn)
-<code class="docutils literal notranslate"><span class="pre">--file_type</span></code>: File type for input files. {bw,bedg,bam}  (Default: bw)</p>
+<p>required arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-f</span></code> : List of input files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-gt</span></code> : Genome table file. Records chromosome length.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-g</span></code>: Gene bed6 file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-c</span></code>： Candidate site file – a file in BED3 format that records potential transcription factor binding sites.</p></li>
+</ul>
+<p>options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-s</span></code>: List of sample names. (Default: T1,T2,…)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-p</span></code>: Prefix for output file. (Default: MotsiEpiResults)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--norm_type</span></code>:  Normalization type. {no_norm,agmn,spmr} (Default: agmn)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--file_type</span></code>: File type for input files. {bw,bedg,bam}  (Default: bw)</p></li>
+</ul>
 </section>
 <section id="mtiepihic">
 <h2>mtiEpiHiC<a class="headerlink" href="#mtiepihic" title="Link to this heading"></a></h2>
@@ -160,7 +177,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Motsi’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2.differential_analysis.html" class="btn btn-neutral float-right" title="Differential Analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
