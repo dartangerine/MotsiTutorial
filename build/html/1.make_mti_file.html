@@ -105,6 +105,7 @@
 <p>Creating an <code class="docutils literal notranslate"><span class="pre">.mti</span></code> format file is the first step in using <strong>Motsi</strong>, as it serves as the input file for other <strong>Motsi</strong> analysis functions.</p>
 <p><strong>Motsi</strong> can conveniently generate <code class="docutils literal notranslate"><span class="pre">.mti</span></code> format files for various types of omics data, including transcriptome data (e.g., RNA-seq), epigenome data (e.g., Histone ChIP-seq), transcription factor data (e.g., TF ChIP-seq), and 3D epigenome data (e.g., Hi-C - ChIP-seq).</p>
 <p>Next, I will guide you through a Quick Start to help you quickly master the usage of these functions:</p>
+<hr class="docutils" />
 <section id="mtirna">
 <h2>mtiRNA<a class="headerlink" href="#mtirna" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">mtiRNA</span></code> is a method provided by <strong>Motsi</strong> for generating <code class="docutils literal notranslate"><span class="pre">.mti</span></code> files from RNA-seq data. It is developed based on <strong>Kallisto</strong>, uses fastq files as input, and can quickly calculate the TPM values of target genes without requiring time-consuming alignment.</p>
@@ -142,6 +143,7 @@
 </ul>
 </section>
 </section>
+<hr class="docutils" />
 <section id="mtiepi">
 <h2>mtiEpi<a class="headerlink" href="#mtiepi" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">mtiEpi</span></code> can generate <code class="docutils literal notranslate"><span class="pre">.mti</span></code> files from aligned epigenetics data as input. We recommend using <code class="docutils literal notranslate"><span class="pre">.bigWig</span></code>format, as it is the fastest input format for processing. Additionally, <code class="docutils literal notranslate"><span class="pre">.bam</span> </code>and <code class="docutils literal notranslate"><span class="pre">.bedGraph</span></code> files are also supported as input.</p>
@@ -173,6 +175,7 @@
 </ul>
 </section>
 </section>
+<hr class="docutils" />
 <section id="mtitf">
 <h2>mtiTF<a class="headerlink" href="#mtitf" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">mtiTF</span></code> is a function designed for transcription factor analysis. It takes transcription factor ChIP-seq/Cut&amp;Tag data as input to generate <code class="docutils literal notranslate"><span class="pre">.mti</span></code> files. Due to the diverse binding sites of transcription factors, <code class="docutils literal notranslate"><span class="pre">mtiTf</span></code> requires an additional candidate_site file in bed3 format that records potential TF binding sites, unlike <code class="docutils literal notranslate"><span class="pre">mtiEpi</span></code>.</p>
@@ -200,6 +203,7 @@
 </ul>
 </section>
 </section>
+<hr class="docutils" />
 <section id="mtihic">
 <h2>mtiHiC<a class="headerlink" href="#mtihic" title="Link to this heading"></a></h2>
 <p><strong>Motsi</strong> also supports the processing of HiC data. Since HiC data is in the form of a two-dimensional matrix, <strong>Motsi</strong> provides multiple metric calculation methods for you to choose from, enabling dimensionality reduction of HiC data.</p>
@@ -227,6 +231,7 @@
 <code class="docutils literal notranslate"><span class="pre">-r</span></code>:  Resolution for Hi-C file. (Default: 10000)</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="mtiepihic">
 <h2>mtiEpiHiC<a class="headerlink" href="#mtiepihic" title="Link to this heading"></a></h2>
 <p>Under development</p>
